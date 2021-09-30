@@ -1,3 +1,28 @@
+/*
+The project is to save time by implementing necessary files.
+All you have to do is to use this template and then run npm install.
+This Template includes:
+
+1. Scene
+2. Camera
+3. GUI
+4. Background Image
+5. Textures (Cube, Torus, PolyHedron)
+6. Geometries (Cube, Torus, PolyHedron, Text)
+7. Materials (Cube, Torus, PolyHedron)
+8. Mesh (cube, torus, polyHedron)
+9. Lights (Ambient, Point, RectLight)
+10. Renderer
+11. Orbit Controls
+12. Grid Helper
+13. Animation Function
+
+Ordering from top to bottom.
+Feel free to uncomment, playaround and debug the code.
+Create your Own project Hassel free.
+Happy Coding
+*/
+
 import "./style.css";
 import * as THREE from "three";
 import { RectAreaLightHelper } from "three/examples/jsm/helpers/RectAreaLightHelper.js";
@@ -45,25 +70,22 @@ const polyTexture = new THREE.TextureLoader().load(paper);
 // Text
 const loader = new THREE.FontLoader();
 
-loader.load(
-  "./fonts/helvetiker_regular.typeface.json",
-  (font = new THREE.Font()) => {
-    const lorem = "Three.js Boiler Plate";
+loader.load("./helvetiker_regular.typeface.json", (font = new THREE.Font()) => {
+  const lorem = "Three.js Boiler Plate";
 
-    const geometry = new THREE.TextGeometry(lorem, {
-      font: font,
-      size: 4,
-      height: 1,
-      curveSegments: 20,
-    });
-    const materials = new THREE.MeshPhongMaterial({ color: 0xffffff });
-    const textMesh = new THREE.Mesh(geometry, materials);
-    textMesh.position.x = -20;
-    textMesh.position.y = 50;
-    textMesh.position.z = 50;
-    scene.add(textMesh);
-  }
-);
+  const geometry = new THREE.TextGeometry(lorem, {
+    font: font,
+    size: 4,
+    height: 1,
+    curveSegments: 20,
+  });
+  const materials = new THREE.MeshPhongMaterial({ color: 0xffffff });
+  const textMesh = new THREE.Mesh(geometry, materials);
+  textMesh.position.x = -20;
+  textMesh.position.y = 50;
+  textMesh.position.z = 50;
+  scene.add(textMesh);
+});
 
 // Poly Hedron
 
