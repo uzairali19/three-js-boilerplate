@@ -255,7 +255,7 @@ function animate() {
   polyhedronMesh.rotation.y += 0.01;
   polyhedronMesh.rotation.z += 0.01;
   // Orbit Controls
-  controls.update();
+  // controls.update();
 
   // Renderer
   renderer.render(scene, camera);

@@ -25,7 +25,7 @@ The boiler plate includes:
 
 ## Live Demo
 
-[Live Demo Link](https://example.com)
+[Live Demo Link](https://three-js-boilerplate.vercel.app/)
 
 ## Getting Started
 
