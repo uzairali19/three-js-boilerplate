@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Three.js Beginner Portfolio
+# Three.js Boiler Template
 
 > This is a basic boilerplate for anyone who starts to work with three.js. The boilerplate contains all the necessary three.js components to help you get started. The repo includes already setup linters for anyone to get started. Big shoutout to [Microverse](https://www.microverse.org/) for providing the linters configurations. In order to see the results that your repo is marked check, push your code for github actions to run your checks.
 
