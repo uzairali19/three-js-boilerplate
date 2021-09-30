@@ -1,7 +1,7 @@
 import "./style.css";
 import * as THREE from "three";
 // import { RectAreaLightHelper } from "three/examples/jsm/helpers/RectAreaLightHelper.js";
-// import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import * as dat from "dat.gui";
 import brick from "./images/brick_texture.jpeg";
 import water from "./images/water_texture.jpeg";
@@ -227,7 +227,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.render(scene, camera);
 
 /* Orbit Controls */
-// const controls = new OrbitControls(camera, renderer.domElement);
+const controls = new OrbitControls(camera, renderer.domElement);
 
 /* Grid Helper */
 // const gridHelper = new THREE.GridHelper(200, 50);
@@ -255,7 +255,8 @@ function animate() {
   polyhedronMesh.rotation.y += 0.01;
   polyhedronMesh.rotation.z += 0.01;
   // Orbit Controls
-  // controls.update();
+  controls.update();
+  controls.enabled = false;
 
   // Renderer
   renderer.render(scene, camera);
