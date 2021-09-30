@@ -17,6 +17,7 @@
       "comma-dangle":"off",
       "quotes":"off",
       "eol-last": "off",
+      "object-shorthand":"off",
       "import/extensions": [ 1, {
         "js": "always", "json": "always"
       }]

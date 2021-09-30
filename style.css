@@ -1,8 +1,24 @@
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  left: 0;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #fff;
+  font-size: larger;
+}
+
+footer a {
+  text-decoration: none;
+  color: rgb(216, 216, 216);
+}
+
+footer a:hover {
+  color: #fff;
 }
