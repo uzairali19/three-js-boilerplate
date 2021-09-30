@@ -1,6 +1,6 @@
 import "./style.css";
 import * as THREE from "three";
-// import { RectAreaLightHelper } from "three/examples/jsm/helpers/RectAreaLightHelper.js";
+import { RectAreaLightHelper } from "three/examples/jsm/helpers/RectAreaLightHelper.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import * as dat from "dat.gui";
 import brick from "./images/brick_texture.jpeg";
@@ -45,22 +45,25 @@ const polyTexture = new THREE.TextureLoader().load(paper);
 // Text
 const loader = new THREE.FontLoader();
 
-loader.load("./helvetiker_regular.typeface.json", (font = new THREE.Font()) => {
-  const lorem = "Three.js Boiler Plate";
+loader.load(
+  "./fonts/helvetiker_regular.typeface.json",
+  (font = new THREE.Font()) => {
+    const lorem = "Three.js Boiler Plate";
 
-  const geometry = new THREE.TextGeometry(lorem, {
-    font: font,
-    size: 4,
-    height: 1,
-    curveSegments: 20,
-  });
-  const materials = new THREE.MeshPhongMaterial({ color: 0xffffff });
-  const textMesh = new THREE.Mesh(geometry, materials);
-  textMesh.position.x = -20;
-  textMesh.position.y = 50;
-  textMesh.position.z = 50;
-  scene.add(textMesh);
-});
+    const geometry = new THREE.TextGeometry(lorem, {
+      font: font,
+      size: 4,
+      height: 1,
+      curveSegments: 20,
+    });
+    const materials = new THREE.MeshPhongMaterial({ color: 0xffffff });
+    const textMesh = new THREE.Mesh(geometry, materials);
+    textMesh.position.x = -20;
+    textMesh.position.y = 50;
+    textMesh.position.z = 50;
+    scene.add(textMesh);
+  }
+);
 
 // Poly Hedron
 
@@ -256,7 +259,7 @@ function animate() {
   polyhedronMesh.rotation.z += 0.01;
   // Orbit Controls
   controls.update();
-  controls.enabled = false;
+  controls.enabled = false; // delete this line to access the orbit controls
 
   // Renderer
   renderer.render(scene, camera);
